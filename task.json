@@ -1,5 +1,5 @@
 {
-    "executionRoleArn": "arn:aws:iam::433223883348:role/grafana-ecs-task-execution",
+    "executionRoleArn": "arn:aws:iam::223722655982:role/grafana-ecs-task-execution",
     "containerDefinitions": [
         {
             "logConfiguration": {
@@ -24,7 +24,7 @@
             "name": "grafana"
         }
     ],
-    "taskRoleArn": "arn:aws:iam::433223883348:role/grafana-ecs-task",
+    "taskRoleArn": "arn:aws:iam::223722655982:role/grafana-ecs-task",
     "family": "grafana_task_definition",
     "requiresCompatibilities": [
         "FARGATE"

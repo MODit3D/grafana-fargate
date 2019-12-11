@@ -1,26 +1,26 @@
 module "grafana" {
-  source = "git@github.com:ulikabbq/grafana-fargate?ref=v1.0//tf"
+  source = "git@github.com:modit3d/grafana-fargate?ref=v1.0//tf"
 
-  dns_zone      = "ZZ7C1JZLM75QT"
+  dns_zone      = "Z33LWS4EYPGVO4"
   region        = "us-east-1"
-  vpc_id        = "vpc-04e9a561"
-  lb_subnets    = ["subnet-6ef25245", "subnet-32089345"]
-  subnets       = ["subnet-28fd4671", "subnet-8ad27ca4"]
-  db_subnet_ids = ["subnet-6ef25245", "subnet-32089345"]
-  cert_arn      = "arn:aws:acm:us-east-1:433223883348:certificate/9891d84e-8a28-4531-afdb-78a2719b1a63"
-  dns_name      = "grafana.ulikabbq.com"
-  account_id    = "433223883348"
+  vpc_id        = "vpc-762d5d0e"
+  lb_subnets    = ["subnet-0786ef4c", "subnet-54332058"]
+  subnets       = ["subnet-0786ef4c", "subnet-54332058"]
+  db_subnet_ids = ["subnet-d7fc72e8", "subnet-db0771bf"]
+  cert_arn      = "arn:aws:acm:us-east-1:223722655982:certificate/5ca132d0-db9e-4061-9ead-8fc6090d1a3a"
+  dns_name      = "grafana.modit3d.xyz"
+  account_id    = "223722655982"
   aws_account_ids = {
-    main = "433223883348"
+    main = "223722655982"
   }
   grafana_count = 2
 }
 
 // Run this module in sub accounts so that grafana can assume the Grafana role in the account
 module "iam" {
-  source = "git@github.com:ulikabbq/grafana-fargate?ref=v1.0//tf/iam_role/"
+  source = "git@github.com:modit3d/grafana-fargate?ref=v1.0//tf/iam_role/"
 
-  grafana_account_id = "433223883348"
+  grafana_account_id = "223722655982"
 }
 
 
