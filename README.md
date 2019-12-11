@@ -1,4 +1,4 @@
-# UPDATE 12.01.2019 
+# UPDATE 12.01.2019 - blah
 It has been a while since I last visited this project and I felt like it needed some updating. The good news is that now it is 
 even easier to get this module up and running. 
 
